@@ -8,17 +8,17 @@
     <header class="main-header">
       <nav class="main-navigation">
         <a class="logo" href="index.html">
-          <img src="img/index-logo.svg" width="111" height="24" alt="Логотип барбершопа «Бородинский»">
+          <img src="img/logo.svg" width="111" height="24" alt="Логотип барбершопа «Бородинский»">
         </a>
         <ul class="site-navigation">
           <li><a href="info.html">Информация</a></li>
           <li><a href="news.html">Новости</a></li>
-          <li><a href="price-list.html">Прайс-лист</a></li>
-          <li class="site-navigation-current"><a href="catalog.html">Магазин</a></li>
+          <li><a href="item-price.html">Прайс-лист</a></li>
+          <li class="site-navigation-current"><a>Магазин</a></li>
           <li><a href="contacts.html">Контакты</a></li>
         </ul>
         <ul class="user-navigation">
-          <li class="login">Вход</li>
+          <li><a class="login" href="login.html">Вход</a></li>
         </ul>
       </nav>
     </header>
@@ -31,7 +31,73 @@
       </ul>
       <section class="filters">
         <h2 class="visually-hidden">Фильтры товаров</h2>
-         <!-- Форма -->
+        <form class="filters" method="get" action="https://echo.htmlacademy.ru">
+          <fieldset>
+            <legend>Производители:</legend>
+            <ul class="filters-producers">
+              <li class="filters-option">
+                <label>
+                  <input type="checkbox" name="Baxter" checked>
+                    Baxter of California
+                </label>
+              </li>
+              <li class="filters-option">
+                <label>
+                  <input type="checkbox" name="Natty">
+                    Mr Natty
+                </label>
+              </li>
+              <li class="filters-option">
+                <label>
+                  <input type="checkbox" name="Suavecito" checked>
+                    Suavecito
+                </label>
+              </li>
+              <li class="filters-option">
+                <label>
+                  <input type="checkbox" name="Malin+Goetz">
+                    Malin+Goetz
+                </label>
+              </li>
+               <li class="filters-option">
+                <label>
+                  <input type="checkbox" name="Murray’s">
+                    Murray’s
+                </label>
+              </li>
+              <li class="filters-option">
+                <label>
+                  <input type="checkbox" name="AmericanCrew" checked>
+                    American Crew
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset>
+            <legend>ГРУППЫ ТОВАРОВ:</legend>
+            <ul>
+              <li class="filters-option">
+                <label>
+                  <input type="radio" name="instruments">
+                    Бритвенные принадлежности
+                </label>
+              </li>
+              <li class="filters-option">
+                <label>
+                  <input type="radio" name="care" checked>
+                    Средства для ухода
+                </label>
+              </li>
+              <li class="filters-option">
+                <label>
+                  <input type="radio" name="accessories">
+                    Аксессуары
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+          <button type="submit">Показать</button>
+        </form>
 
        </section>
       <section class="catalog">
@@ -168,16 +234,6 @@
         <a class="button" href="https://htmlacademy.ru">HTML Academy</a>
       </p>
     </footer>
-    <section class="modal modal-login">
-      <h2>Личный кабинет</h2>
-      <p>Введите свой логин и пароль.</p>
-      <!-- Здесь будет форма -->
-      <span class="modal-close">x</span>
-    </section>
 
-    <section class="modal modal-map">
-      <h2 class="visually-hidden">Как до нас добраться</h2>
-      <span class="modal-close">x</span>
-    </section>
   </body>
 </html>

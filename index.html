@@ -13,12 +13,12 @@
         <ul class="site-navigation">
           <li><a href="info.html">Информация</a></li>
           <li><a href="news.html">Новости</a></li>
-          <li><a href="price-list.html">Прайс-лист</a></li>
+          <li><a href="item-price.html">Прайс-лист</a></li>
           <li><a href="catalog.html">Магазин</a></li>
           <li><a href="contacts.html">Контакты</a></li>
         </ul>
         <ul class="user-navigation">
-          <li class="login">Вход</li>
+          <li><a class="login-link" href="login.html">Вход</a></li>
         </ul>
       </nav>
     </header>
@@ -60,8 +60,8 @@
         <figure class="gallery-content">
           <a href="#"><img src="img/studio.jpg" width="286" height="164" alt="Интерьер"></a>
         </figure>
-        <span class="button gallery-button gallery-button-back">Назад</span>
-        <span class="button gallery-button gallery-button-next">Вперед</span>
+        <button class="button gallery-button gallery-button-back" type="button">Назад</button>
+        <button class="button gallery-button gallery-button-next" type="button">Вперед</button>
       </section>
       <section class="contacts">
         <h2>Контактная информация</h2>
@@ -81,7 +81,24 @@
       <section class="appointment">
         <h2>Записаться</h2>
         <p class="appointment-info">Укажите желаемую дату и время и мы свяжемся с вами для подтверждения брони</p>
-        <!-- Здесь будет форма -->
+        <form class="appointment-form" action="https://echo.htmlacademy.ru" method="post">
+          <p class="appointment-item">
+            Дата
+            <input type="text" name="date" value="" placeholder="08.10.2017">
+          </p>
+          <p class="appointment-item">
+            Время
+            <input type="text" name="time" value="" placeholder="10:00">
+          </p>
+          <p class="appointment-item">
+            Ваше имя
+            <input type="text" name="name" value="" placeholder="Борода">
+          </p>
+          <p class="appointment-item">
+            Телефон
+            <input type="tel" name="phone" value="" placeholder="+7 123 456-78-90">
+          </p>
+        </form>
       </section>
     </main>
    <footer class="main-footer">
@@ -107,14 +124,32 @@
 
     <section class="modal modal-login">
       <h2>Личный кабинет</h2>
-      <p>Введите свой логин и пароль.</p>
-      <!-- Здесь будет форма -->
-      <span class="modal-close">x</span>
+      <p> Введите пожалуйста свой логин и пароль.</p>
+      <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+        <label>
+          Логин
+          <input class="login-icon-user" type="text" name="login" placeholder="Логин">
+        </label>
+        <label>
+          Пароль
+          <input class="login-icon-password" type="password" name="password" placeholder="Пароль">
+        </label>
+        <label>
+          <input type="checkbox" name="remember">
+          Запомните меня
+        </label>
+        <a class="restore" href="#">Я забыл пароль!</a>
+        <button class="button" type="submit">Отправить</button>
+      </form>
+      <button class="modal-close" type="submit">Закрыть</button>
     </section>
 
     <section class="modal modal-map">
       <h2 class="visually-hidden">Как до нас добраться</h2>
-      <span class="modal-close">x</span>
+      <p>
+        <img src="img/map.jpg" width="766" height="560" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
+      </p>
+      <button class="modal-close" type="submit">Закрыть</button>
     </section>
   </body>
 </html>
